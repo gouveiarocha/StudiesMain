@@ -1,5 +1,5 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name"> <xliff:g id='star'>\u2605</xliff:g> StudiesMain</string>
+    <string name="app_name">Estudos Gerais <xliff:g id='star'>\u2605</xliff:g></string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">BLANK FRAGMENT</string>
