@@ -1,6 +1,7 @@
 package com.gouveia.studiesmain.gdc.core.workmanager.view
 
-import android.Manifest.permission.*
+import android.Manifest.permission.READ_EXTERNAL_STORAGE
+import android.Manifest.permission.WRITE_EXTERNAL_STORAGE
 import android.net.Uri
 import android.os.Bundle
 import android.view.View
@@ -9,10 +10,10 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import com.gouveia.studiesmain.utils.extensions.navTo
 import com.gouveia.studiesmain.R
 import com.gouveia.studiesmain.databinding.FragmentGdcSelectImageBinding
 import com.gouveia.studiesmain.gdc.core.workmanager.utils.KEY_IMAGE_URI
+import com.gouveia.studiesmain.utils.extensions.navTo
 
 class GdcSelectImageFragment : Fragment(R.layout.fragment_gdc_select_image) {
 

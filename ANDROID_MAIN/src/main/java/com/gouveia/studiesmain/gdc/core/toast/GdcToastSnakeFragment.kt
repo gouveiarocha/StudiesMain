@@ -1,4 +1,4 @@
-package com.gouveia.android_main.gdc.core.toast
+package com.gouveia.studiesmain.gdc.core.toast
 
 import android.content.pm.ActivityInfo
 import android.os.Bundle
@@ -6,9 +6,9 @@ import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.android.material.snackbar.Snackbar
-import com.gouveia.studiesmain.utils.extensions.showToast
 import com.gouveia.studiesmain.R
 import com.gouveia.studiesmain.databinding.FragmentGdcToastSnakeBinding
+import com.gouveia.studiesmain.utils.extensions.showToast
 
 class GdcToastSnakeFragment : Fragment(R.layout.fragment_gdc_toast_snake) {
 

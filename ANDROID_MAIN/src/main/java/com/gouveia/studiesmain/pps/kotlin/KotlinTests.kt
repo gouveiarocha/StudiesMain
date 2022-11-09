@@ -1,4 +1,4 @@
-package com.gouveia.android_main.pps.kotlin
+package com.gouveia.studiesmain.pps.kotlin
 
 fun main() {
     testaComandoAll()

@@ -40,7 +40,7 @@
 
     <fragment
         android:id="@+id/gdcToastSnakeFragment"
-        android:name="com.gouveia.android_main.gdc.core.toast.GdcToastSnakeFragment"
+        android:name="com.gouveia.studiesmain.gdc.core.toast.GdcToastSnakeFragment"
         android:label="fragment_gdc_toast_snake"
         tools:layout="@layout/fragment_gdc_toast_snake">
         <action
@@ -160,7 +160,7 @@
 
     <fragment
         android:id="@+id/dcaWebViewDarModeFragment"
-        android:name="com.gouveia.android_main.dca.web_view_dark_mode.DcaWebViewDarModeFragment"
+        android:name="com.gouveia.studiesmain.dca.web_view_dark_mode.DcaWebViewDarkModeFragment"
         android:label="fragment_dca_web_view_dar_mode"
         tools:layout="@layout/fragment_dca_web_view_dar_mode">
         <action

@@ -1,4 +1,4 @@
-package com.gouveia.android_main.dca.web_view_dark_mode
+package com.gouveia.studiesmain.dca.web_view_dark_mode
 
 import android.content.res.Configuration.UI_MODE_NIGHT_MASK
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
@@ -17,7 +17,7 @@ import com.gouveia.studiesmain.databinding.FragmentDcaWebViewDarModeBinding
 // REF DOCUMENTAÇÃO
 // https://developer.android.com/reference/androidx/webkit/package-summary
 
-class DcaWebViewDarModeFragment : Fragment(R.layout.fragment_dca_web_view_dar_mode) {
+class DcaWebViewDarkModeFragment : Fragment(R.layout.fragment_dca_web_view_dar_mode) {
 
     private lateinit var binding: FragmentDcaWebViewDarModeBinding
 

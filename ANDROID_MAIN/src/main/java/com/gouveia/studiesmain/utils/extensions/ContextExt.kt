@@ -1,4 +1,4 @@
-package com.gouveia.android_main.utils.extensions
+package com.gouveia.studiesmain.utils.extensions
 
 import android.content.Context
 import androidx.annotation.IdRes

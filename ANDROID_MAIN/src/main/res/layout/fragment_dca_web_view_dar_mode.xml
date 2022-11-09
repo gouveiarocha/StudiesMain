@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".dca.web_view_dark_mode.DcaWebViewDarModeFragment">
+    tools:context=".dca.web_view_dark_mode.DcaWebViewDarkModeFragment">
 
     <WebView
         android:id="@+id/force_dark_webview"
