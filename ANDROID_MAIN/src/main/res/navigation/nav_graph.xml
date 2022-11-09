@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <!--- MAIN -->
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.gouveia.studiesmain.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_gdcHomeFragment"
+            app:destination="@id/gdcHomeFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_dcaHomeFragment"
+            app:destination="@id/dcaHomeFragment" />
+    </fragment>
+
+    <!--- GDC -->
+
+    <fragment
+        android:id="@+id/gdcHomeFragment"
+        android:name="com.gouveia.studiesmain.gdc.GdcHomeFragment"
+        android:label="fragment_gdc_home"
+        tools:layout="@layout/fragment_gdc_home">
+        <action
+            android:id="@+id/action_gdcHomeFragment_to_gdcToastSnakeFragment"
+            app:destination="@id/gdcToastSnakeFragment" />
+        <action
+            android:id="@+id/action_gdcHomeFragment_to_gdcNotificationFragment"
+            app:destination="@id/gdcNotificationFragment" />
+        <action
+            android:id="@+id/action_gdcHomeFragment_to_gdcSelectImageFragment"
+            app:destination="@id/gdcSelectImageFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/gdcToastSnakeFragment"
+        android:name="com.gouveia.android_main.gdc.core.toast.GdcToastSnakeFragment"
+        android:label="fragment_gdc_toast_snake"
+        tools:layout="@layout/fragment_gdc_toast_snake">
+        <action
+            android:id="@+id/action_gdcToastSnakeFragment_to_gdcHomeFragment"
+            app:destination="@id/gdcHomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/gdcNotificationFragment"
+        android:name="com.gouveia.studiesmain.gdc.core.notification.GdcNotificationFragment"
+        android:label="fragment_gdc_notification"
+        tools:layout="@layout/fragment_gdc_notification">
+        <action
+            android:id="@+id/action_gdcNotificationFragment_to_gdcHomeFragment"
+            app:destination="@id/gdcHomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/gdcSelectImageFragment"
+        android:name="com.gouveia.studiesmain.gdc.core.workmanager.view.GdcSelectImageFragment"
+        android:label="fragment_gdc_select_image"
+        tools:layout="@layout/fragment_gdc_select_image">
+        <action
+            android:id="@+id/action_gdcSelectImageFragment_to_gdcHomeFragment"
+            app:destination="@id/gdcHomeFragment" />
+        <action
+            android:id="@+id/action_gdcSelectImageFragment_to_gdcBlurFragment"
+            app:destination="@id/gdcBlurFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/gdcBlurFragment"
+        android:name="com.gouveia.studiesmain.gdc.core.workmanager.view.GdcBlurFragment"
+        android:label="fragment_gdc_blur"
+        tools:layout="@layout/fragment_gdc_blur">
+        <action
+            android:id="@+id/action_gdcBlurFragment_to_gdcSelectImageFragment"
+            app:destination="@id/gdcSelectImageFragment" />
+    </fragment>
+
+    <!--- DCA -->
+
+    <fragment
+        android:id="@+id/dcaHomeFragment"
+        android:name="com.gouveia.studiesmain.dca.DcaHomeFragment"
+        android:label="fragment_dca_home"
+        tools:layout="@layout/fragment_dca_home">
+        <action
+            android:id="@+id/action_dcaHomeFragment_to_dcaRequestPermissionFragment"
+            app:destination="@id/dcaRequestPermissionFragment" />
+        <action
+            android:id="@+id/action_dcaHomeFragment_to_dcaRequestResultFragment"
+            app:destination="@id/dcaRequestResultFragment" />
+        <action
+            android:id="@+id/action_dcaHomeFragment_to_dcaKeyboardVibrationFragment"
+            app:destination="@id/dcaKeyboardVibrationFragment" />
+        <action
+            android:id="@+id/action_dcaHomeFragment_to_dcaObfuscationFragment"
+            app:destination="@id/dcaObfuscationFragment" />
+        <action
+            android:id="@+id/action_dcaHomeFragment_to_dcaWebViewDarModeFragment"
+            app:destination="@id/dcaWebViewDarModeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dcaRequestPermissionFragment"
+        android:name="com.gouveia.studiesmain.dca.permission.DcaRequestPermissionFragment"
+        android:label="fragment_dca_request_permission"
+        tools:layout="@layout/fragment_dca_request_permission">
+        <action
+            android:id="@+id/action_dcaRequestPermissionFragment_to_dcaHomeFragment"
+            app:destination="@id/dcaHomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dcaRequestResultFragment"
+        android:name="com.gouveia.studiesmain.dca.start_for_result.DcaRequestResultFragment"
+        android:label="fragment_dca_request_result"
+        tools:layout="@layout/fragment_dca_request_result">
+        <action
+            android:id="@+id/action_dcaRequestResultFragment_to_dcaResultFragment"
+            app:destination="@id/dcaResultFragment" />
+        <action
+            android:id="@+id/action_dcaRequestResultFragment_to_dcaHomeFragment"
+            app:destination="@id/dcaHomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dcaResultFragment"
+        android:name="com.gouveia.studiesmain.dca.start_for_result.DcaResultFragment"
+        android:label="fragment_dca_result"
+        tools:layout="@layout/fragment_dca_result">
+        <action
+            android:id="@+id/action_dcaResultFragment_to_dcaRequestResultFragment"
+            app:destination="@id/dcaRequestResultFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dcaKeyboardVibrationFragment"
+        android:name="com.gouveia.studiesmain.dca.keyboard_vibration.DcaKeyboardVibrationFragment"
+        android:label="fragment_dca_keyboard_vibration"
+        tools:layout="@layout/fragment_dca_keyboard_vibration">
+        <action
+            android:id="@+id/action_dcaKeyboardVibrationFragment_to_dcaHomeFragment"
+            app:destination="@id/dcaHomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dcaObfuscationFragment"
+        android:name="com.gouveia.studiesmain.dca.obfuscation.DcaObfuscationFragment"
+        android:label="fragment_dca_obligation"
+        tools:layout="@layout/fragment_dca_obfuscation">
+        <action
+            android:id="@+id/action_dcaObfuscationFragment_to_dcaHomeFragment"
+            app:destination="@id/dcaHomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dcaWebViewDarModeFragment"
+        android:name="com.gouveia.android_main.dca.web_view_dark_mode.DcaWebViewDarModeFragment"
+        android:label="fragment_dca_web_view_dar_mode"
+        tools:layout="@layout/fragment_dca_web_view_dar_mode">
+        <action
+            android:id="@+id/action_dcaWebViewDarModeFragment_to_dcaHomeFragment"
+            app:destination="@id/dcaHomeFragment" />
+    </fragment>
+
+</navigation>
