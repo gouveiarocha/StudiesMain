@@ -11,6 +11,9 @@
     <!-- PARA BROADCASTRECEIVER -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
+    <!-- PARA GERENCIAR O DISPLAY -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
     <application
         android:name=".MainApplication"
         android:allowBackup="true"

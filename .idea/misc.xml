@@ -5,9 +5,13 @@
       <map>
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/drawable-v24/ic_favorite.xml" value="0.1045" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/activity_test.xml" value="0.10648148148148148" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_gdc_blur.xml" value="0.20416666666666666" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_gdc_notification.xml" value="0.560546875" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_gdc_select_image.xml" value="0.20416666666666666" />
+        <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_pps_proximity_sensor.xml" value="0.33" />
+        <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_pps_sensor_manager.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>

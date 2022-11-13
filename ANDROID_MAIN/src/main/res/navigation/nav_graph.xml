@@ -18,6 +18,9 @@
         <action
             android:id="@+id/action_mainFragment_to_dcaHomeFragment"
             app:destination="@id/dcaHomeFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_ppsSensor"
+            app:destination="@id/ppsSensor" />
     </fragment>
 
     <!--- GDC -->
@@ -166,6 +169,16 @@
         <action
             android:id="@+id/action_dcaWebViewDarModeFragment_to_dcaHomeFragment"
             app:destination="@id/dcaHomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ppsSensor"
+        android:name="com.gouveia.studiesmain.pps.proximity_sensor.PpsSensor"
+        android:label="fragment_pps_sensor"
+        tools:layout="@layout/fragment_pps_sensor">
+        <action
+            android:id="@+id/action_ppsSensor_to_mainFragment"
+            app:destination="@id/mainFragment" />
     </fragment>
 
 </navigation>

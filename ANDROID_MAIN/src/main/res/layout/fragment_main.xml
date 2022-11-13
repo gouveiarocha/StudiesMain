@@ -68,6 +68,19 @@
             android:textColor="@color/white"
             tools:ignore="RtlHardcoded" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_pps_sensor_manager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/design_default_color_secondary"
+            android:text="SensorManager + WakeLock(Desligar Display de acordo com a Proximidade)"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            tools:ignore="RtlHardcoded" />
+
     </LinearLayout>
 
 </ScrollView>
