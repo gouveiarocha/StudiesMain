@@ -3,20 +3,22 @@ package com.gouveia.studiesmain.dca
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import com.gouveia.studiesmain.utils.extensions.hasInternet
-import com.gouveia.studiesmain.utils.extensions.navTo
-import com.gouveia.studiesmain.utils.extensions.showToast
-import com.gouveia.studiesmain.utils.extensions.showYoutubeVideo
 import com.gouveia.studiesmain.R
 import com.gouveia.studiesmain.databinding.FragmentDcaHomeBinding
+import com.gouveia.studiesmain.utils.extensions.*
 
 class DcaHomeFragment : Fragment(R.layout.fragment_dca_home) {
 
-    private lateinit var binding: FragmentDcaHomeBinding
+    // (ANTES) -> DO BINDING DELEGATE
+    //private lateinit var binding: FragmentDcaHomeBinding
+
+    // (DEPOIS) -> COM BINDING DELEGATE
+    private val binding by viewBinding(FragmentDcaHomeBinding::bind)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding = FragmentDcaHomeBinding.bind(view)
+        // (ANTES) -> DO BINDING DELEGATE
+        //binding = FragmentDcaHomeBinding.bind(view)
 
         with(binding) {
 
@@ -47,6 +49,9 @@ class DcaHomeFragment : Fragment(R.layout.fragment_dca_home) {
 
             //COMO VISUALIZAR ERROS COM TIMBER EM PRODUCÃO: https://youtu.be/rz8O8V4Ho1M
             dcaTimber.setOnClickListener { showYoutubeVideo("rz8O8V4Ho1M") }
+
+            //COMO USAR BINDING DELEGATE COM CLASSE CUSTOMIZADA + KOTLIN EXTENSIONS
+            dcaBindingDelegate.setOnClickListener { showYoutubeVideo("qivrch6qxQw") }
 
         }
 

@@ -13,6 +13,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentMainBinding.bind(view)
+
         binding.btnGdc.setOnClickListener { navTo(R.id.gdcHomeFragment) }
         binding.btnDca.setOnClickListener { navTo(R.id.dcaHomeFragment) }
 
