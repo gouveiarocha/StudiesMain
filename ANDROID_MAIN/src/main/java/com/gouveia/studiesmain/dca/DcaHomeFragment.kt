@@ -53,6 +53,9 @@ class DcaHomeFragment : Fragment(R.layout.fragment_dca_home) {
             //COMO USAR BINDING DELEGATE COM CLASSE CUSTOMIZADA + KOTLIN EXTENSIONS
             dcaBindingDelegate.setOnClickListener { showYoutubeVideo("qivrch6qxQw") }
 
+            //SINGLETON QUE RETORNA SE O APARELHO É OU NÃO UM EMULADOR: https://youtu.be/A14WEDpWjds
+            dcaCheckEmulator.setOnClickListener { showToast(if (EmulatorDetector.isEmulator()) "YES" else "NO") }
+
         }
 
     }
