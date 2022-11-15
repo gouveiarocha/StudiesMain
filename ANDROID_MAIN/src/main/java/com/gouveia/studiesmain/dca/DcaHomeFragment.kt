@@ -5,19 +5,20 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import com.gouveia.studiesmain.R
 import com.gouveia.studiesmain.databinding.FragmentDcaHomeBinding
+import com.gouveia.studiesmain.utils.EmulatorDetector
 import com.gouveia.studiesmain.utils.extensions.*
 
 class DcaHomeFragment : Fragment(R.layout.fragment_dca_home) {
 
-    // (ANTES) -> DO BINDING DELEGATE
+    // (ANTES) DO BINDING DELEGATE
     //private lateinit var binding: FragmentDcaHomeBinding
 
-    // (DEPOIS) -> COM BINDING DELEGATE
+    // (DEPOIS) COM BINDING DELEGATE
     private val binding by viewBinding(FragmentDcaHomeBinding::bind)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        // (ANTES) -> DO BINDING DELEGATE
+        // (ANTES) DO BINDING DELEGATE
         //binding = FragmentDcaHomeBinding.bind(view)
 
         with(binding) {

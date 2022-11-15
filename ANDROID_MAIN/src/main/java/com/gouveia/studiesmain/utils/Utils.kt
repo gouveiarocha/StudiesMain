@@ -1,4 +1,4 @@
-package com.gouveia.studiesmain.utils.extensions
+package com.gouveia.studiesmain.utils
 
 import android.content.Context
 import android.graphics.BlendMode
