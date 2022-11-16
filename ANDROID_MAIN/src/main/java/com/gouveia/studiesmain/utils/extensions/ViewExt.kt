@@ -1,9 +1,7 @@
 package com.gouveia.studiesmain.utils.extensions
 
 import android.animation.ObjectAnimator
-import android.content.Intent
 import android.content.SharedPreferences
-import android.net.Uri
 import android.os.Build
 import android.os.Handler
 import android.os.Looper
@@ -22,10 +20,6 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.textfield.TextInputLayout
-//import com.progdeelite.dca.BuildConfig
-//import com.progdeelite.dca.R
-//import com.progdeelite.dca.item_decoration.HeadlineItemDecorator
-//import com.progdeelite.dca.item_decoration.ItemDecoratorWithText
 
 fun View.startAnimation(anim: Animation, onEnd: () -> Unit) {
     anim.setAnimationListener(object : Animation.AnimationListener {
@@ -54,7 +48,9 @@ fun View.hideKeyboard(view: View) {
     view.clearFocus()
 }
 
-// PRÁTICO PARA USAR APÓS VERIFICACÕES DE ENTRADAS
+/** ANIMA A VIEW COM UM SHAKE; EXECUTA O MÉTODO PASSADO NO PARAMETO */
+// Obs: Neste exemplo a extensão está apenas no TextInputLayout - mas poderia ser na View e ficar
+// disponivel para qualquer elemento.
 fun TextInputLayout.shake(onEndAction: () -> Unit = {}) {
     val startX = 0f
     val translationX = 35f
@@ -94,7 +90,7 @@ fun Button.setupButtonBackgroundColor(@ColorRes colorId: Int) {
 }
 
 @Suppress("DEPRECATION")
-fun TextView.setTextColorById(@ColorRes colorId: Int){
+fun TextView.setTextColorById(@ColorRes colorId: Int) {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
         setTextColor(resources.getColor(colorId, null))
     } else {
@@ -104,7 +100,7 @@ fun TextView.setTextColorById(@ColorRes colorId: Int){
 
 // 1) Como animar troca de idioma
 // 2) Como balançar componentes pra cima e pra baixo
-fun TextView.animateTranslation(translation: String){
+fun TextView.animateTranslation(translation: String) {
     var index = 0
     val mHandler = Handler(Looper.getMainLooper())
     val characterAdder: Runnable = object : Runnable {
@@ -120,7 +116,7 @@ fun TextView.animateTranslation(translation: String){
     mHandler.postDelayed(characterAdder, 10)
 }
 
-fun TextInputLayout.animateTranslation(translation: String){
+fun TextInputLayout.animateTranslation(translation: String) {
     var index = 0
     val mHandler = Handler(Looper.getMainLooper())
     val characterAdder: Runnable = object : Runnable {
@@ -136,7 +132,7 @@ fun TextInputLayout.animateTranslation(translation: String){
     mHandler.postDelayed(characterAdder, 10)
 }
 
-fun View.bounceUpAndDown(){
+fun View.bounceUpAndDown() {
     val startX = 0f
     val translationY = 25f
     val bounceDuration = 450L
@@ -155,8 +151,8 @@ fun View.bounceUpAndDown(){
 
 // USANDO SHAPES - DIVISÓRIA SIMPLES
 fun RecyclerView.setSimpleDefaultDivider(@DrawableRes drawableRes: Int) {
-    val divider = DividerItemDecoration(this.context,DividerItemDecoration.VERTICAL)
-    val drawable = ContextCompat.getDrawable(this.context,drawableRes)
+    val divider = DividerItemDecoration(this.context, DividerItemDecoration.VERTICAL)
+    val drawable = ContextCompat.getDrawable(this.context, drawableRes)
     drawable?.let {
         divider.setDrawable(it)
         addItemDecoration(divider)

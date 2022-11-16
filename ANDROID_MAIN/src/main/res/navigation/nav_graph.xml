@@ -106,6 +106,9 @@
         <action
             android:id="@+id/action_dcaHomeFragment_to_dcaWebViewDarModeFragment"
             app:destination="@id/dcaWebViewDarModeFragment" />
+        <action
+            android:id="@+id/action_dcaHomeFragment_to_dcaAnimFieldsFragment"
+            app:destination="@id/dcaAnimFieldsFragment" />
     </fragment>
 
     <fragment
@@ -179,6 +182,15 @@
         <action
             android:id="@+id/action_ppsSensor_to_mainFragment"
             app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dcaAnimFieldsFragment"
+        android:name="com.gouveia.studiesmain.dca.anim_fields.DcaAnimFieldsFragment"
+        android:label="fragment_dca_anim_fields"
+        tools:layout="@layout/fragment_dca_anim_fields" >
+        <action
+            android:id="@+id/action_dcaAnimFieldsFragment_to_dcaHomeFragment"
+            app:destination="@id/dcaHomeFragment" />
     </fragment>
 
 </navigation>
