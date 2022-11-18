@@ -110,7 +110,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
             android:layout_marginBottom="5dp"
-            android:text="Codelab: User Interface"
+            android:text="User Interface"
             android:textStyle="bold" />
 
         <Button
@@ -271,14 +271,14 @@
             tools:ignore="RtlHardcoded" />
 
         <Button
-            android:id="@+id/codelab_material_components"
+            android:id="@+id/gdc_material_components"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:backgroundTint="@color/design_default_color_secondary"
             android:gravity="left|center_vertical"
-            android:text="Material Components (Kotlin)"
+            android:text="Listeners &amp; Material Components (Kotlin)"
             android:textAllCaps="false"
             tools:ignore="RtlHardcoded" />
 

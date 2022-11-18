@@ -39,6 +39,9 @@
         <action
             android:id="@+id/action_gdcHomeFragment_to_gdcSelectImageFragment"
             app:destination="@id/gdcSelectImageFragment" />
+        <action
+            android:id="@+id/action_gdcHomeFragment_to_gdcMaterialComponentsFragment"
+            app:destination="@id/gdcMaterialComponentsFragment" />
     </fragment>
 
     <fragment
@@ -82,6 +85,29 @@
         <action
             android:id="@+id/action_gdcBlurFragment_to_gdcSelectImageFragment"
             app:destination="@id/gdcSelectImageFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/gdcMaterialComponentsFragment"
+        android:name="com.gouveia.studiesmain.gdc.user_interface.material_components.GdcMaterialComponentsFragment"
+        android:label="fragment_gdc_material_components"
+        tools:layout="@layout/fragment_gdc_material_components">
+        <action
+            android:id="@+id/action_gdcMaterialComponentsFragment_to_gdcHomeFragment"
+            app:destination="@id/gdcHomeFragment" />
+        <action
+            android:id="@+id/action_gdcMaterialComponentsFragment_to_gdcProductGridFragment"
+            app:destination="@id/gdcProductGridFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/gdcProductGridFragment"
+        android:name="com.gouveia.studiesmain.gdc.user_interface.material_components.GdcProductGridFragment"
+        android:label="fragment_gdc_product_grid"
+        tools:layout="@layout/fragment_gdc_product_grid">
+        <action
+            android:id="@+id/action_gdcProductGridFragment_to_gdcMaterialComponentsFragment"
+            app:destination="@id/gdcMaterialComponentsFragment" />
     </fragment>
 
     <!--- DCA -->
@@ -183,11 +209,12 @@
             android:id="@+id/action_ppsSensor_to_mainFragment"
             app:destination="@id/mainFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/dcaAnimFieldsFragment"
         android:name="com.gouveia.studiesmain.dca.anim_fields.DcaAnimFieldsFragment"
         android:label="fragment_dca_anim_fields"
-        tools:layout="@layout/fragment_dca_anim_fields" >
+        tools:layout="@layout/fragment_dca_anim_fields">
         <action
             android:id="@+id/action_dcaAnimFieldsFragment_to_dcaHomeFragment"
             app:destination="@id/dcaHomeFragment" />
