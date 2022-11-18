@@ -9,7 +9,7 @@ import timber.log.Timber
 class CustomLogger : Timber.Tree() {
     override fun log(priority: Int, tag: String?, message: String, throwable: Throwable?) {
         if (priority == Log.ERROR && throwable != null) {
-            // Logue o que quiser com lib de Microsoft, AppCenter, etc...
+            // Logue o que quiser com lib da Microsoft, AppCenter, etc...
             Timber.e(throwable)
             // Crashes.trackError(throwable) //Ex. usando a lib da Microsoft.
         }

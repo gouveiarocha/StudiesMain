@@ -60,6 +60,14 @@ class DcaHomeFragment : Fragment(R.layout.fragment_dca_home) {
             //ANIMACÕES DE ELEMENTOS: https://youtu.be/4WMmin8vnU0
             dcaAnimFields.setOnClickListener { navTo(R.id.dcaAnimFieldsFragment) }
 
+            //COMO PERSISTIR DADOS EM MEMÓRIA COM SP (CHAVE-VALOR): https://youtu.be/XBqY-3MPjkg
+            //Aula explana a classe LocalStorage.kt - Foco na classe interna LocalSimpleStorage
+            dcaSaveInMemory.setOnClickListener { showYoutubeVideo("XBqY-3MPjkg") }
+
+            //COMO CRIPTOGRAFAR DADOS SENSIVEIS: https://youtu.be/aJqZ38-bZUc
+            //Aula explana a classe LocalStorage.kt - Foco na classe interna LocalSecureStorage e suas dependências
+            dcaSaveInMemoryCriptography.setOnClickListener { showYoutubeVideo("aJqZ38-bZUc") }
+
         }
 
     }
