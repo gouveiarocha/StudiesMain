@@ -135,6 +135,9 @@
         <action
             android:id="@+id/action_dcaHomeFragment_to_dcaAnimFieldsFragment"
             app:destination="@id/dcaAnimFieldsFragment" />
+        <action
+            android:id="@+id/action_dcaHomeFragment_to_dcaBackPressedFragment"
+            app:destination="@id/dcaBackPressedFragment" />
     </fragment>
 
     <fragment
@@ -217,6 +220,16 @@
         tools:layout="@layout/fragment_dca_anim_fields">
         <action
             android:id="@+id/action_dcaAnimFieldsFragment_to_dcaHomeFragment"
+            app:destination="@id/dcaHomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dcaBackPressedFragment"
+        android:name="com.gouveia.studiesmain.dca.onback_pressed.DcaBackPressedFragment"
+        android:label="fragment_dca_back_pressed"
+        tools:layout="@layout/fragment_dca_back_pressed">
+        <action
+            android:id="@+id/action_dcaBackPressedFragment_to_dcaHomeFragment"
             app:destination="@id/dcaHomeFragment" />
     </fragment>
 

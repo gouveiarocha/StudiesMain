@@ -68,6 +68,9 @@ class DcaHomeFragment : Fragment(R.layout.fragment_dca_home) {
             //Aula explana a classe LocalStorage.kt - Foco na classe interna LocalSecureStorage e suas dependências
             dcaSaveInMemoryCriptography.setOnClickListener { showYoutubeVideo("aJqZ38-bZUc") }
 
+            //COMO REAGIR AO BOTÃO DE BACK EM FRAGMENTS (EX. C\ INTERFACE ANONIMA): https://youtu.be/8pvQ-dTaRGI
+            dcaOnbackPressed.setOnClickListener { navTo(R.id.dcaBackPressedFragment) }
+
         }
 
     }
