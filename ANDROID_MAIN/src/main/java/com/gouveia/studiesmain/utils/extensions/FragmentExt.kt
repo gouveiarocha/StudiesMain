@@ -25,13 +25,16 @@ import androidx.annotation.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.view.ContextThemeWrapper
-//import androidx.biometric.BiometricPrompt
+import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
+import com.gouveia.studiesmain.BuildConfig
+import timber.log.Timber
+import javax.crypto.Cipher
 
 /** OFUSCAMENTO DE TELA NO FRAGMENT - BY ME */
 fun Fragment.setObfuscation(overshadow: Boolean) {
@@ -162,53 +165,53 @@ fun Fragment.hasInternet(): Boolean {
     }
 }
 
-///** EXIBE UM LEITOR DE BIOMETRIA: XXXXXXX */
-//fun Fragment.promptBiometricChecker(
-//    title: String,
-//    message: String? = null, // OPCIONAL - SE QUISER EXIBIR UMA MENSAGEM
-//    negativeLabel: String,
-//    confirmationRequired: Boolean = true,
-//    initializedCipher: Cipher? = null, // OPICIONAL - SE VC MESMO(SUA APP) QUISER MANTER O CONTROLE SOBRE OS ACESSOS
-//    onAuthenticationSuccess: (BiometricPrompt.AuthenticationResult) -> Unit,
-//    onAuthenticationError: (Int, String) -> Unit
-//) {
-//    val executor = ContextCompat.getMainExecutor(requireContext())
-//    val prompt = BiometricPrompt(this, executor, object : BiometricPrompt.AuthenticationCallback() {
-//        override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
-//            Timber.d("Authenticado com sucesso, acesso permitido!")
-//            onAuthenticationSuccess(result)
-//        }
-//
-//        override fun onAuthenticationError(errorCode: Int, errorMessage: CharSequence) {
-//            Timber.d("Acesso negado! Alguem ta tentando usar teu celular!")
-//            onAuthenticationError(errorCode, errorMessage.toString())
-//        }
-//    })
-//
-//    val promptInfo = BiometricPrompt.PromptInfo.Builder()
-//        .setTitle(title)
-//        .apply { if (message != null) setDescription(message) }
-//        .setConfirmationRequired(confirmationRequired)
-//        .setNegativeButtonText(negativeLabel)
-//        .build()
-//
-//    initializedCipher?.let {
-//        val cryptoObject = BiometricPrompt.CryptoObject(initializedCipher)
-//        prompt.authenticate(promptInfo, cryptoObject)
-//        return
-//    }
-//
-//    prompt.authenticate(promptInfo)
-//}
+/** EXIBE LEITOR DE BIOMETRIA: XXXXXXX */
+fun Fragment.launchBiometricAuth(
+    title: String,
+    message: String? = null, //Opcional, caso queira exibir uma mensagem...
+    negativeLabel: String, // Descrição do botão Cancelar...
+    confirmationRequired: Boolean = true,
+    initializedCipher: Cipher? = null, // Opcional, caso vc mesmo(Seu App) queira manter o controle sobre os acessos
+    onAuthenticationSuccess: (BiometricPrompt.AuthenticationResult) -> Unit,
+    onAuthenticationError: (Int, String) -> Unit
+) {
+    val executor = ContextCompat.getMainExecutor(requireContext())
+    val prompt = BiometricPrompt(this, executor, object : BiometricPrompt.AuthenticationCallback() {
+        override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
+            Timber.d("Autenticação Biometrica - Sucesso.")
+            onAuthenticationSuccess(result)
+        }
 
-///** NAVEGAR PARA PLAYSTORE DE MANEIRA FACIL */
-//fun Fragment.openPlayStore() {
-//    Intent(Intent.ACTION_VIEW).apply {
-//        data =
-//            Uri.parse("https://play.google.com/store/apps/details?id=${BuildConfig.APPLICATION_ID}")
-//        setPackage("com.android.vending")
-//    }.let { startActivity(it) }
-//}
+        override fun onAuthenticationError(errorCode: Int, errorMessage: CharSequence) {
+            Timber.d("Autenticação Biometrica - Erro.")
+            onAuthenticationError(errorCode, errorMessage.toString())
+        }
+    })
+
+    val promptInfo = BiometricPrompt.PromptInfo.Builder()
+        .setTitle(title)
+        .apply { if (message != null) setDescription(message) }
+        .setConfirmationRequired(confirmationRequired)
+        .setNegativeButtonText(negativeLabel)
+        .build()
+
+    initializedCipher?.let {
+        val cryptoObject = BiometricPrompt.CryptoObject(initializedCipher)
+        prompt.authenticate(promptInfo, cryptoObject)
+        return
+    }
+
+    prompt.authenticate(promptInfo)
+}
+
+/** NAVEGAR PARA PLAYSTORE DE MANEIRA FACIL */
+fun Fragment.openPlayStore() {
+    Intent(Intent.ACTION_VIEW).apply {
+        data =
+            Uri.parse("https://play.google.com/store/apps/details?id=${BuildConfig.APPLICATION_ID}")
+        setPackage("com.android.vending")
+    }.let { startActivity(it) }
+}
 
 /** EXIBIR MATERIAL ALERT DIALOG DE ACORDO COM SUAS NECESSIDADES */
 fun Fragment.showDefaultMaterialAlertDialog(
