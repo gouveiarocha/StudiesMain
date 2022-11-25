@@ -2,7 +2,11 @@ package com.gouveia.studiesmain
 
 import android.app.Application
 import com.gouveia.studiesmain.BuildConfig
+import com.gouveia.studiesmain.pps.pocs.movies.di.pocMoviesModule
 import com.gouveia.studiesmain.utils.others.CustomLogger
+import org.koin.android.ext.koin.androidContext
+import org.koin.android.ext.koin.androidLogger
+import org.koin.core.context.startKoin
 import timber.log.Timber
 
 // INSTRUÇÕES AULA LOG COM TIMBER
@@ -42,6 +46,14 @@ class MainApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         setupLogging()
+
+        // Koin - Aqui, vamos startar o Koin. (POC Movies)
+        startKoin {
+            androidLogger()
+            androidContext(this@MainApplication)
+            modules(pocMoviesModule)
+        }
+
 
 //        // +------------------------------------------------------------------+
 //        // | Instalando DefaultExceptionHandler: https://youtu.be/zu9MOl95LKs |

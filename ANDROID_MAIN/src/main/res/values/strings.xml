@@ -16,6 +16,10 @@
         este aqui. Portanto, no nosso código devemos conseguir ofuscartudo, ou apenas esse
         fragment.
     </string>
+    <string name="explanation_poc_movies">POC - Simula threads para retornar dados de um
+        determinado filme, usando: Thread Java, Coroutines, Camadas View ->
+        ViewModel(MVVM+LiveData) -> Repository, Injeção de Dependencia e KOIN.
+    </string>
 
     <!-- Titles -->
     <!-- TODO: rfer -->
@@ -138,5 +142,6 @@
     <string name="attachment_summary_on" translatable="false">Baixar automaticamente Anexos de Emails</string>
     <string name="attachment_summary_off" translatable="false">Apenas baixar Anexos quando solicitados manualmente</string>
     <string name="computationError" translatable="false">Impossível Resolver Esse Calculo!</string>
+
 
 </resources>

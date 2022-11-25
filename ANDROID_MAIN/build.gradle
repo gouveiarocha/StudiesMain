@@ -96,6 +96,10 @@ dependencies {
     // BIOMETRIA
     implementation "androidx.biometric:biometric-ktx:1.2.0-alpha04"
 
+    // KOIN
+    def koin_version= "3.2.0"
+    implementation "io.insert-koin:koin-android:$koin_version"
+
     // DEFAULT TEST
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

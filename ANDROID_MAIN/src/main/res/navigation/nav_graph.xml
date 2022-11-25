@@ -21,6 +21,9 @@
         <action
             android:id="@+id/action_mainFragment_to_ppsSensor"
             app:destination="@id/ppsSensor" />
+        <action
+            android:id="@+id/action_mainFragment_to_ppsPocMovies"
+            app:destination="@id/ppsPocMovies" />
     </fragment>
 
     <!--- GDC -->
@@ -207,16 +210,6 @@
     </fragment>
 
     <fragment
-        android:id="@+id/ppsSensor"
-        android:name="com.gouveia.studiesmain.pps.proximity_sensor.PpsSensor"
-        android:label="fragment_pps_sensor"
-        tools:layout="@layout/fragment_pps_sensor">
-        <action
-            android:id="@+id/action_ppsSensor_to_mainFragment"
-            app:destination="@id/mainFragment" />
-    </fragment>
-
-    <fragment
         android:id="@+id/dcaAnimFieldsFragment"
         android:name="com.gouveia.studiesmain.dca.anim_fields.DcaAnimFieldsFragment"
         android:label="fragment_dca_anim_fields"
@@ -244,6 +237,25 @@
         <action
             android:id="@+id/action_dcaBiometryFragment_to_dcaHomeFragment"
             app:destination="@id/dcaHomeFragment" />
+    </fragment>
+
+    <!--- Proprios -->
+
+    <fragment
+        android:id="@+id/ppsSensor"
+        android:name="com.gouveia.studiesmain.pps.proximity_sensor.PpsSensor"
+        android:label="fragment_pps_sensor"
+        tools:layout="@layout/fragment_pps_sensor">
+        <action
+            android:id="@+id/action_ppsSensor_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ppsPocMovies"
+        android:name="com.gouveia.studiesmain.pps.pocs.movies.PpsMoviesFragment"
+        android:label="fragment_pps_poc_movies"
+        tools:layout="@layout/fragment_pps_movies">
     </fragment>
 
 </navigation>
