@@ -1,4 +1,4 @@
-package com.gouveia.studiesmain.pps.kotlin.tests
+package com.gouveia.studiesmain.pps.kotlin
 
 fun main() {
     testaComandoAll()
@@ -20,7 +20,8 @@ private fun testaComandoAny() {
     println(test2)
 
 }
-private fun testaComandoAll(){
+
+private fun testaComandoAll() {
 
     // COMANDO ALL (COLECTIONS)
 
