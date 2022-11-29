@@ -33,6 +33,7 @@ import androidx.navigation.fragment.findNavController
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import com.gouveia.studiesmain.BuildConfig
+import com.gouveia.studiesmain.dca.dialog_fullscreen.AlertDialogFullscreen
 import timber.log.Timber
 import javax.crypto.Cipher
 
@@ -57,8 +58,10 @@ fun Fragment.navTo(@IdRes dest: Int, args: Bundle) = findNavController().navigat
 fun Fragment.navBack() = findNavController().navigateUp()
 
 /** EXIBE UMA MENSAGEM SIMPLES TEMPORARIZADA NA TELA DO CELULAR */
-fun Fragment.showToast(msg: String) =
-    Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT).show()
+fun Fragment.showToast(
+    msg: String,
+    duration: Int = Toast.LENGTH_SHORT
+) = Toast.makeText(requireContext(), msg, duration).show()
 
 /** EXIBE UMA MENSAGEM SIMPLES TEMPORARIZADA POREM RETANGULAR. TAMBÉM PODE DAR A OPCÃO DE ADICIONAR ACÕES */
 fun Fragment.showSnake(view: View, msg: String) =
@@ -300,24 +303,24 @@ fun Fragment.createFullCustomAlertDialog(
 }
 
 
-///** EXIBIR UM ALERTA DE MENSAGENS FULLSCREEN PERSONALIZADO */
-//fun Fragment.showFullscreenAlertDialog(
-//    title: String,
-//    message: String,
-//    positiveButtonLabel: String = getString(android.R.string.ok),
-//    positiveButtonClickListener: () -> Unit = {},
-//    cancelButtonLabel: String? = null,
-//    negativeButtonClickListener: () -> Unit = {},
-//    dismissAction: () -> Unit = {},
-//) = FullscreenAlertDialog(
-//    title = title,
-//    message = message,
-//    positiveLabel = positiveButtonLabel,
-//    positiveAction = positiveButtonClickListener,
-//    cancelLabel = cancelButtonLabel,
-//    cancelAction = negativeButtonClickListener,
-//    dismissAction = dismissAction,
-//).also { it.show(parentFragmentManager, it.javaClass.simpleName) }
+/** DIALOG FULLSCREEN PERSONALIZADO */
+fun Fragment.showFullscreenAlertDialog(
+    title: String,
+    message: String,
+    positiveButtonLabel: String = getString(android.R.string.ok),
+    positiveButtonClickListener: () -> Unit = {},
+    cancelButtonLabel: String? = null,
+    negativeButtonClickListener: () -> Unit = {},
+    dismissAction: () -> Unit = {},
+) = AlertDialogFullscreen(
+    title = title,
+    message = message,
+    positiveLabel = positiveButtonLabel,
+    positiveAction = positiveButtonClickListener,
+    negativeLabel = cancelButtonLabel,
+    negativeAction = negativeButtonClickListener,
+    dismissAction = dismissAction,
+).also { it.show(parentFragmentManager, it.javaClass.simpleName) }
 
 
 ///** REALIZAR UMA TAREFA EM LOOP (EX: CONSULTAR ALGUM RESULTADO DE UM SERVIDOR) */

@@ -144,6 +144,9 @@
         <action
             android:id="@+id/action_dcaHomeFragment_to_dcaBiometryFragment"
             app:destination="@id/dcaBiometryFragment" />
+        <action
+            android:id="@+id/action_dcaHomeFragment_to_dcaFullScreenDialog"
+            app:destination="@id/dcaFullScreenDialog" />
     </fragment>
 
     <fragment
@@ -239,6 +242,12 @@
             app:destination="@id/dcaHomeFragment" />
     </fragment>
 
+    <fragment
+        android:id="@+id/dcaFullScreenDialog"
+        android:name="com.gouveia.studiesmain.dca.dialog_fullscreen.DcaFullscreenDialogFragment"
+        android:label="fragment_dca_full_screen_dialog"
+        tools:layout="@layout/fragment_dca_fullscreen_dialog"></fragment>
+
     <!--- Proprios -->
 
     <fragment
@@ -255,7 +264,6 @@
         android:id="@+id/ppsPocMovies"
         android:name="com.gouveia.studiesmain.pps.pocs.movies.PpsMoviesFragment"
         android:label="fragment_pps_poc_movies"
-        tools:layout="@layout/fragment_pps_movies">
-    </fragment>
+        tools:layout="@layout/fragment_pps_movies"></fragment>
 
 </navigation>
