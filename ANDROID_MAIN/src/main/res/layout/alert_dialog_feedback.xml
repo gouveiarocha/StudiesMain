@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:background="@drawable/bg_gradient_card"
+    android:padding="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/feedback_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/feedbackIconMain"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:contentDescription="@string/content_description_rating"
+            android:paddingBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/feedback_layout"
+            app:srcCompat="@drawable/img_rating"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/feedbackTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/bangers"
+            android:maxLines="1"
+            android:text="@string/feedbak_rating_title"
+            android:textColor="@color/color_blue"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/feedbackIconMain"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlSymmetry"
+            tools:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/feedbackSubtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/ubuntu_light"
+            android:maxLines="2"
+            android:paddingStart="2dp"
+            android:text="@string/feedback_rating_subtitle"
+            android:textColor="@color/color_blue"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/feedback_layout"
+            app:layout_constraintEnd_toEndOf="@+id/feedbackTitle"
+            app:layout_constraintStart_toStartOf="@+id/feedbackTitle"
+            app:layout_constraintTop_toBottomOf="@+id/feedbackTitle"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="RtlSymmetry" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/feedbackRatingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:fontFamily="@font/bangers"
+        android:text="@string/feedback_rating_btn_send"
+        android:textColor="@color/color_blue"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feedback_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.gouveia.studiesmain.dca.dialog_fullscreen
+package com.gouveia.studiesmain.dca.dialogs
 
 import android.content.DialogInterface
 import android.os.Bundle
@@ -9,7 +9,7 @@ import com.gouveia.studiesmain.databinding.AlertDialogFullscreenBinding
 import com.gouveia.studiesmain.utils.extensions.setVisible
 import com.gouveia.studiesmain.utils.extensions.viewBinding
 
-// IMPORTANTE: A CLASSE DEVE EXTENDER DE DialogFragment.
+// IMPORTANTE: Observar que a classe extende de DialogFragment.
 
 class AlertDialogFullscreen(
     val title: String = "",
@@ -32,6 +32,7 @@ class AlertDialogFullscreen(
             body.text = message
             btnPositive.text = positiveLabel
             btnPositive.setOnClickListener {
+                dismiss()
                 positiveAction()
             }
             btnNegative.text = negativeLabel

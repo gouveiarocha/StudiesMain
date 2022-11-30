@@ -4,17 +4,36 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/drawable-v24/ic_favorite.xml" value="0.1045" />
+        <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.162" />
+        <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/drawable-v24/ic_snake.xml" value="0.162" />
+        <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/drawable-v24/ic_toast.xml" value="0.162" />
+        <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/drawable/bg_gradient_card.xml" value="0.162" />
+        <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/drawable/dialog_alert_custom_rounded_border.xml" value="0.162" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/drawable/ic_error.xml" value="0.162" />
+        <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/drawable/ic_launcher_background.xml" value="0.162" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/drawable/ic_login.xml" value="0.1" />
+        <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/drawable/ic_success.xml" value="0.162" />
+        <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/font/test.xml" value="0.16145833333333334" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/activity_test.xml" value="0.10648148148148148" />
+        <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/alert_dialog_custom.xml" value="0.20416666666666666" />
+        <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/alert_dialog_custom_button.xml" value="0.20416666666666666" />
+        <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/alert_dialog_feedback.xml" value="0.5" />
+        <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/alert_dialog_fullscreen.xml" value="0.20416666666666666" />
+        <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/dialog_alert_custom_success.xml" value="0.20416666666666666" />
+        <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/dialog_alert_custom_success_button.xml" value="0.20416666666666666" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/dialog_alert_fullscreen.xml" value="0.18" />
+        <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/dialog_feedback.xml" value="0.20416666666666666" />
+        <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_custom_dialog.xml" value="0.20416666666666666" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_dca_anim_fields.xml" value="0.20416666666666666" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_dca_back_pressed.xml" value="0.20416666666666666" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_dca_biometric.xml" value="0.20416666666666666" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_dca_biometry.xml" value="0.20416666666666666" />
+        <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_dca_dialogs.xml" value="0.20416666666666666" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_dca_full_screen_dialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_dca_fullscreen_dialog.xml" value="0.20416666666666666" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_dca_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_dca_keyboard_vibration.xml" value="0.20416666666666666" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_gdc_blur.xml" value="0.20416666666666666" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_gdc_home.xml" value="0.33" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_gdc_material_components.xml" value="0.20416666666666666" />

@@ -33,7 +33,7 @@ import androidx.navigation.fragment.findNavController
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import com.gouveia.studiesmain.BuildConfig
-import com.gouveia.studiesmain.dca.dialog_fullscreen.AlertDialogFullscreen
+import com.gouveia.studiesmain.dca.dialogs.AlertDialogFullscreen
 import timber.log.Timber
 import javax.crypto.Cipher
 
@@ -207,7 +207,7 @@ fun Fragment.launchBiometricAuth(
     prompt.authenticate(promptInfo)
 }
 
-/** NAVEGAR PARA PLAYSTORE DE MANEIRA FACIL */
+/** NAVEGAR PARA PLAYSTORE */
 fun Fragment.openPlayStore() {
     Intent(Intent.ACTION_VIEW).apply {
         data =
@@ -239,7 +239,7 @@ fun Fragment.showDefaultMaterialAlertDialog(
         .create().also { it.show() }
 }
 
-/** CRIAR ALERTAS SEMI-CUSTOMIZAOS (APENAS COM CONTEUDO ESTÁTICO CUSTOMIZADO) */
+/** EXIBIR ALERTA SEMI-CUSTOMIZADOS (APENAS COM CONTEUDO ESTÁTICO CUSTOMIZADO) */
 fun Fragment.showDefaultMaterialAlertDialogWithCustomStaticContent(
     positiveButtonLabel: String? = null,
     positiveButtonClickListener: () -> Unit = {},
@@ -252,7 +252,7 @@ fun Fragment.showDefaultMaterialAlertDialogWithCustomStaticContent(
     @StyleRes styleId: Int? = null,
     @DrawableRes customBackgroundId: Int? = null
 ) {
-    // if you want to customize the dialog's theme
+    // Customiza tema do Dialog.
     val builder = if (styleId != null) MaterialAlertDialogBuilder(
         ContextThemeWrapper(
             requireContext(),
@@ -260,7 +260,7 @@ fun Fragment.showDefaultMaterialAlertDialogWithCustomStaticContent(
         )
     ) else MaterialAlertDialogBuilder(requireContext())
 
-    // if you want to customize the alert dialog's content!
+    // Customiza conteúdo do Dialog.
     builder.setView(customLayoutId)
 
     val dialog = builder
@@ -271,7 +271,7 @@ fun Fragment.showDefaultMaterialAlertDialogWithCustomStaticContent(
         .setOnDismissListener { dismissListener() }
         .create()
 
-    // if you want to customize the window background like color and border
+    // Customiza o background do Dialog.
     if (customBackgroundId != null) {
         dialog.window?.setBackgroundDrawableResource(customBackgroundId)
     }
@@ -284,7 +284,7 @@ fun Fragment.createFullCustomAlertDialog(
     @StyleRes styleId: Int? = null,
     @DrawableRes customBackgroundId: Int? = null
 ): AlertDialog {
-    // if you want to customize the dialog's theme
+    // Customiza tema do Dialog.
     val builder = if (styleId != null) MaterialAlertDialogBuilder(
         ContextThemeWrapper(
             requireContext(),
@@ -295,13 +295,12 @@ fun Fragment.createFullCustomAlertDialog(
     builder.setView(customView)
     val dialog = builder.create()
 
-    // if you want to customize the window background like color and border
+    // Customiza o background do Dialog.
     if (customBackgroundId != null) {
         dialog.window?.setBackgroundDrawableResource(customBackgroundId)
     }
     return dialog
 }
-
 
 /** DIALOG FULLSCREEN PERSONALIZADO */
 fun Fragment.showFullscreenAlertDialog(

@@ -116,7 +116,7 @@ class GdcNotificationFragment : Fragment(R.layout.fragment_gdc_notification) {
     // PERSONALIZA A NOTIFICAÇÃO COM UM ICONE
     private fun updateNotification() {
         // Converte o icone em um bitmap.
-        val androidImage = BitmapFactory.decodeResource(resources, R.drawable.ic_notification)
+        val androidImage = BitmapFactory.decodeResource(resources, R.drawable.img_notification)
         // Atualizando o estilo e o titulo
         val notification = getNotificationBuilder()
             .setStyle(
@@ -166,7 +166,7 @@ class GdcNotificationFragment : Fragment(R.layout.fragment_gdc_notification) {
         return NotificationCompat.Builder(requireContext(), PRIMARY_CHANNEL_ID).apply {
             setContentTitle("Você recebeu uma notificação!")
             setContentText("Valeu, já vou me inscrever no canal!")
-            setSmallIcon(R.drawable.ic_notification_update)
+            setSmallIcon(R.drawable.img_notification_update)
             setContentIntent(notificationPendingIntent)
             priority = NotificationCompat.PRIORITY_HIGH
             setDefaults(NotificationCompat.DEFAULT_ALL)

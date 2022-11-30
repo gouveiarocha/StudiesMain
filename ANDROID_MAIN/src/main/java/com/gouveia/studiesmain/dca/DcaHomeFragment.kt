@@ -74,8 +74,9 @@ class DcaHomeFragment : Fragment(R.layout.fragment_dca_home) {
             // BIOMETRIA: https://youtu.be/xpN94rgPkds
             dcaBiometry.setOnClickListener { navTo(R.id.dcaBiometryFragment) }
 
-            // FULLSCREENDIALOG: https://youtu.be/DRkS0NWNAvg
-            dcaFullscreenDialog.setOnClickListener { navTo(R.id.dcaFullScreenDialog) }
+            // DIALOGS CUSTOMIZADOS: https://youtu.be/W8La6tMRv14
+            // DIALOG FULLSCREEN: https://youtu.be/DRkS0NWNAvg
+            dcaFullscreenDialog.setOnClickListener { navTo(R.id.dcaDialogs) }
 
         }
 

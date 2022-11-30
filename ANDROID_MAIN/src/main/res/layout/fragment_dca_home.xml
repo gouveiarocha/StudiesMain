@@ -236,7 +236,7 @@
             android:layout_marginEnd="16dp"
             android:backgroundTint="@color/design_default_color_secondary"
             android:gravity="left|center_vertical"
-            android:text="Fullscreen Dialog Personalizado"
+            android:text="Dialogs"
             android:textAllCaps="false"
             android:textColor="@color/white"
             tools:ignore="RtlHardcoded" />

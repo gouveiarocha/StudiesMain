@@ -143,5 +143,16 @@
     <string name="attachment_summary_off" translatable="false">Apenas baixar Anexos quando solicitados manualmente</string>
     <string name="computationError" translatable="false">Impossível Resolver Esse Calculo!</string>
 
+    <!--  dialogs imports - refatorar?  -->
+    <string name="content_description_rating">"Ícone com cinco estrelas "</string>
+    <string name="feedbak_rating_title">\"Ainda num votasse?\"</string>
+    <string name="feedbak_rating_title0">\"Já avaliasse?\"</string>
+    <string name="feedbak_rating_title1">\"Já fosse votar?\"</string>
+    <string name="feedbak_rating_title2">\"Cadê teu voto?\"</string>
+    <string name="feedbak_rating_title3">\"Já motivasse a gente?\"</string>
+    <string name="feedback_rating_subtitle">\"Façiço não. Vote logo!\"</string>
+    <string name="feedback_rating_btn_send">\"Foi mal vei! Vô votar agora mermo!\"</string>
+    <string name="feedback_rating_btn_later">Mais tarde</string>
+
 
 </resources>

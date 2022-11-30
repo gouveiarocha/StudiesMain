@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:padding="@dimen/default_margin"
-        app:layout_constraintBottom_toTopOf="@id/next_button"
+        app:layout_constraintBottom_toTopOf="@id/btn_positive"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout

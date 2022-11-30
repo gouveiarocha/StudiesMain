@@ -145,8 +145,8 @@
             android:id="@+id/action_dcaHomeFragment_to_dcaBiometryFragment"
             app:destination="@id/dcaBiometryFragment" />
         <action
-            android:id="@+id/action_dcaHomeFragment_to_dcaFullScreenDialog"
-            app:destination="@id/dcaFullScreenDialog" />
+            android:id="@+id/action_dcaHomeFragment_to_dcaDialogs"
+            app:destination="@id/dcaDialogs" />
     </fragment>
 
     <fragment
@@ -243,10 +243,11 @@
     </fragment>
 
     <fragment
-        android:id="@+id/dcaFullScreenDialog"
-        android:name="com.gouveia.studiesmain.dca.dialog_fullscreen.DcaFullscreenDialogFragment"
-        android:label="fragment_dca_full_screen_dialog"
-        tools:layout="@layout/fragment_dca_fullscreen_dialog"></fragment>
+        android:id="@+id/dcaDialogs"
+        android:name="com.gouveia.studiesmain.dca.dialogs.DcaDialogsFragment"
+        android:label="fragment_dca_dialogs"
+        tools:layout="@layout/fragment_dca_dialogs">
+    </fragment>
 
     <!--- Proprios -->
 
