@@ -16,17 +16,27 @@ class GdcHomeFragment : Fragment(R.layout.fragment_gdc_home) {
         binding = FragmentGdcHomeBinding.bind(view)
 
         // CORE
-        binding.gdcToastSnake.setOnClickListener { navTo(R.id.gdcToastSnakeFragment) }
-        binding.gdcNotification.setOnClickListener { navTo(R.id.gdcNotificationFragment) }
+        with(binding) {
 
-        // https://youtu.be/5AGWzq9JpYo
-        binding.gdcWorkManager.setOnClickListener { navTo(R.id.gdcSelectImageFragment) }
+            // TOAST AND SNAKE -
+            gdcToastSnake.setOnClickListener { navTo(R.id.gdcToastSnakeFragment) }
+            gdcNotification.setOnClickListener { navTo(R.id.gdcNotificationFragment) }
 
-        // USER INTERFACE --->
+            // WORK MANAGER - https://youtu.be/5AGWzq9JpYo
+            gdcWorkManager.setOnClickListener { navTo(R.id.gdcSelectImageFragment) }
 
-        // LISTENERS & MATERIAL COMPONENTS - https://youtu.be/qE5lZRSrgxo
-        binding.gdcMaterialComponents.setOnClickListener { navTo(R.id.gdcMaterialComponentsFragment) }
+        }
 
+        // USER INTERFACE
+        with(binding) {
+
+            // LISTENERS & MATERIAL COMPONENTS - https://youtu.be/qE5lZRSrgxo
+            gdcMaterialComponents.setOnClickListener { navTo(R.id.gdcMaterialComponentsFragment) }
+
+            // INTERACTIVE ANDROID STUDIO UI - https://youtu.be/XBUbvKczRRI
+            binding.gdcInteractiveUi.setOnClickListener { navTo(R.id.gdcInteractiveUiFragment) }
+
+        }
 
     }
 

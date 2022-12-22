@@ -45,6 +45,9 @@
         <action
             android:id="@+id/action_gdcHomeFragment_to_gdcMaterialComponentsFragment"
             app:destination="@id/gdcMaterialComponentsFragment" />
+        <action
+            android:id="@+id/action_gdcHomeFragment_to_gdcInteractiveUiFragment"
+            app:destination="@id/gdcInteractiveUiFragment" />
     </fragment>
 
     <fragment
@@ -112,6 +115,12 @@
             android:id="@+id/action_gdcProductGridFragment_to_gdcMaterialComponentsFragment"
             app:destination="@id/gdcMaterialComponentsFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/gdcInteractiveUiFragment"
+        android:name="com.gouveia.studiesmain.gdc.user_interface.interactive_ui.GdcInteractiveUiFragment"
+        android:label="fragment_gdc_interactive_ui"
+        tools:layout="@layout/fragment_gdc_interactive_ui" />
 
     <!--- DCA -->
 
@@ -274,5 +283,6 @@
         android:name="com.gouveia.studiesmain.pps.pocs.movies.PpsMoviesFragment"
         android:label="fragment_pps_poc_movies"
         tools:layout="@layout/fragment_pps_movies" />
+
 
 </navigation>

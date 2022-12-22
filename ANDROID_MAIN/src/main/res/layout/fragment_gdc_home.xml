@@ -175,7 +175,7 @@
             tools:ignore="RtlHardcoded" />
 
         <Button
-            android:id="@+id/codelab_interactive_ui"
+            android:id="@+id/gdc_interactive_ui"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
