@@ -71,12 +71,16 @@ class DcaHomeFragment : Fragment(R.layout.fragment_dca_home) {
             //COMO REAGIR AO BOTÃO DE BACK EM FRAGMENTS (EX. C\ INTERFACE ANONIMA): https://youtu.be/8pvQ-dTaRGI
             dcaOnbackPressed.setOnClickListener { navTo(R.id.dcaBackPressedFragment) }
 
-            // BIOMETRIA: https://youtu.be/xpN94rgPkds
+            //BIOMETRIA: https://youtu.be/xpN94rgPkds
             dcaBiometry.setOnClickListener { navTo(R.id.dcaBiometryFragment) }
 
-            // DIALOGS CUSTOMIZADOS: https://youtu.be/W8La6tMRv14
-            // DIALOG FULLSCREEN: https://youtu.be/DRkS0NWNAvg
-            dcaFullscreenDialog.setOnClickListener { navTo(R.id.dcaDialogs) }
+            //DIALOGS CUSTOMIZADOS: https://youtu.be/W8La6tMRv14
+            //DIALOG FULLSCREEN: https://youtu.be/DRkS0NWNAvg
+            dcaFullscreenDialog.setOnClickListener { navTo(R.id.dcaDialogsFragment) }
+
+            //COMO REALIZAR UM POLLING A UMA API: https://youtu.be/OX2KhMbm0_I
+            //DEFAULT EXCEPTION HANDLER: https://youtu.be/zu9MOl95LKs
+            dcaPollingApi.setOnClickListener { navTo(R.id.dcaPollingApiFragment) }
 
         }
 

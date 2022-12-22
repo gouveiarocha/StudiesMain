@@ -4,6 +4,8 @@ import android.app.Application
 import com.gouveia.studiesmain.BuildConfig
 import com.gouveia.studiesmain.pps.pocs.movies.di.pocMoviesModule
 import com.gouveia.studiesmain.utils.others.CustomLogger
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -46,6 +48,8 @@ class MainApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         setupLogging()
+        setupDefaultExceptionHandler()
+//        setupDependencyInjection()
 
         // Koin - Aqui, vamos startar o Koin. (POC Movies)
         startKoin {
@@ -54,13 +58,6 @@ class MainApplication : Application() {
             modules(pocMoviesModule)
         }
 
-
-//        // +------------------------------------------------------------------+
-//        // | Instalando DefaultExceptionHandler: https://youtu.be/zu9MOl95LKs |
-//        // +------------------------------------------------------------------+
-//        setupDefaultExceptionHandler()
-//        //setupDependencyInjection()
-//
 //        // +-----------------------------------------------------------------+
 //        // | COMO MIGRAR SETTINGS P/ APP NOVO: https://youtu.be/HANcH98pU6I  |
 //        // +-----------------------------------------------------------------+
@@ -97,19 +94,19 @@ class MainApplication : Application() {
         }
     }
 
-//    // +-------------------------------------------------------------------+
-//    // | Instalando DefaultExceptionHandler: https://youtu.be/zu9MOl95LKs  |
-//    // +-------------------------------------------------------------------+
-//    private fun setupDefaultExceptionHandler() {
-//        // pega o default Uncaught Exception handler para repassar os erros
-//        val existingHandler = Thread.getDefaultUncaughtExceptionHandler()
-//        // intercepta os erros, faz o que or preciso e so depois disso lança os erros
-//        Thread.setDefaultUncaughtExceptionHandler { thread, exception ->
-//            ClearableCoroutineScope(Dispatchers.Default).launch {
-//                Timber.v("clearing cookies")
-//                // Faça tudo que for pedido pela auditoria de segurança
-//            }
-//            existingHandler?.uncaughtException(thread, exception)
-//        }
-//    }
+    // CONFIGURA O DefaultExceptionHandler - https://youtu.be/zu9MOl95LKs
+    private fun setupDefaultExceptionHandler() {
+        //Pega o DefaultUncaughtExceptionHandler para repassar os erros ->
+        val existingHandler = Thread.getDefaultUncaughtExceptionHandler()
+        //Intercepta os erros ->
+        Thread.setDefaultUncaughtExceptionHandler { thread, exception ->
+            ClearableCoroutineScope(Dispatchers.Default).launch {
+                //Aqui podemos fazer as ações necessárias.
+                Timber.v("DefaultExceptionHandler - Clearing Cookies") //LOG de exemplo...
+            }
+            //Após as ações, lança os erros ao sistema ->
+            existingHandler?.uncaughtException(thread, exception)
+        }
+    }
+
 }

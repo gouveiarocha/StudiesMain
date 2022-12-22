@@ -24,4 +24,5 @@ fun Drawable.setColor(context: Context, @ColorRes color: Int) {
     } else {
         setColorFilter(ContextCompat.getColor(context, color), PorterDuff.Mode.SRC_ATOP)
     }
+
 }

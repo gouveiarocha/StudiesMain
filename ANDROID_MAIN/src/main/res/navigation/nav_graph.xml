@@ -146,7 +146,10 @@
             app:destination="@id/dcaBiometryFragment" />
         <action
             android:id="@+id/action_dcaHomeFragment_to_dcaDialogs"
-            app:destination="@id/dcaDialogs" />
+            app:destination="@id/dcaDialogsFragment" />
+        <action
+            android:id="@+id/action_dcaHomeFragment_to_dcaPollingApiFragment"
+            app:destination="@id/dcaPollingApiFragment" />
     </fragment>
 
     <fragment
@@ -243,11 +246,16 @@
     </fragment>
 
     <fragment
-        android:id="@+id/dcaDialogs"
+        android:id="@+id/dcaDialogsFragment"
         android:name="com.gouveia.studiesmain.dca.dialogs.DcaDialogsFragment"
         android:label="fragment_dca_dialogs"
-        tools:layout="@layout/fragment_dca_dialogs">
-    </fragment>
+        tools:layout="@layout/fragment_dca_dialogs" />
+
+    <fragment
+        android:id="@+id/dcaPollingApiFragment"
+        android:name="com.gouveia.studiesmain.dca.polling_api.DcaPollingApiFragment"
+        android:label="fragment_dca_polling_api"
+        tools:layout="@layout/fragment_dca_polling_api" />
 
     <!--- Proprios -->
 
@@ -265,6 +273,6 @@
         android:id="@+id/ppsPocMovies"
         android:name="com.gouveia.studiesmain.pps.pocs.movies.PpsMoviesFragment"
         android:label="fragment_pps_poc_movies"
-        tools:layout="@layout/fragment_pps_movies"></fragment>
+        tools:layout="@layout/fragment_pps_movies" />
 
 </navigation>

@@ -34,6 +34,10 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import com.gouveia.studiesmain.BuildConfig
 import com.gouveia.studiesmain.dca.dialogs.AlertDialogFullscreen
+import com.gouveia.studiesmain.ClearableCoroutineScope
+import com.gouveia.studiesmain.utils.providers.CoroutineContextProvider
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import timber.log.Timber
 import javax.crypto.Cipher
 
@@ -321,64 +325,61 @@ fun Fragment.showFullscreenAlertDialog(
     dismissAction = dismissAction,
 ).also { it.show(parentFragmentManager, it.javaClass.simpleName) }
 
+/** REALIZAR UMA TAREFA EM LOOP (EX: CONSULTAR ALGUM RESULTADO DE UM SERVIDOR) */
+fun Fragment.polling(
+    isOffline: () -> Boolean = { false },
+    onOffline: () -> Unit = {},
+    isCompleted: () -> Boolean = { false },
+    onCompleted: () -> Unit = {},
+    isError: () -> Boolean = { false },
+    onError: () -> Unit = {},
+    isCanceled: () -> Boolean = { false },
+    onCanceled: () -> Unit = {},
+    pollingDelayInMilliSeconds: Long = 5000L
+) {
+    val pollingScope = ClearableCoroutineScope(CoroutineContextProvider().ui)
+    pollingScope.launch {
+        if (isOffline()) {
+            handleStateChange(onOffline, pollingScope)
+            return@launch
+        }
+        when {
+            isCompleted() -> {
+                handleStateChange(onCompleted, pollingScope)
+                return@launch
+            }
+            isError() -> {
+                handleStateChange(onError, pollingScope)
+                return@launch
+            }
+            isCanceled() -> {
+                handleStateChange(onCanceled, pollingScope)
+                return@launch
+            }
+            else -> {
+                showToast("Polling a cada 5 segundos!")
+                delay(pollingDelayInMilliSeconds)
+                pollingScope.clearScope()
+                polling(
+                    isOffline = isOffline,
+                    onOffline = onOffline,
+                    isCompleted = isCompleted,
+                    onCompleted = onCompleted,
+                    isError = isError,
+                    onError = onError,
+                    isCanceled = isCanceled,
+                    onCanceled = onCanceled
+                )
+            }
+        }
+    }
+}
 
-///** REALIZAR UMA TAREFA EM LOOP (EX: CONSULTAR ALGUM RESULTADO DE UM SERVIDOR) */
-//fun Fragment.polling(
-//    isOffline: () -> Boolean = { false },
-//    onOffline: () -> Unit = {},
-//    isCompleted: () -> Boolean = { false },
-//    onCompleted: () -> Unit = {},
-//    isError: () -> Boolean = { false },
-//    onError: () -> Unit = {},
-//    isCanceled: () -> Boolean = { false },
-//    onCanceled: () -> Unit = {},
-//    pollingDelayInMilliSeconds: Long = 5000L
-//) {
-//    val pollingScope = ClearableCoroutineScope(CoroutineContextProvider().ui)
-//    pollingScope.launch {
-//        if (isOffline()) {
-//            handleStateChange(onOffline, pollingScope)
-//            return@launch
-//        }
-//        when {
-//            isCompleted() -> {
-//                handleStateChange(onCompleted, pollingScope)
-//                return@launch
-//            }
-//            isCanceled() -> {
-//                handleStateChange(onCanceled, pollingScope)
-//                return@launch
-//            }
-//            isError() -> {
-//                handleStateChange(onError, pollingScope)
-//                return@launch
-//            }
-//            else -> {
-//                toast("polling a cada 5 segundos!")
-//                delay(pollingDelayInMilliSeconds)
-//                pollingScope.clearScope()
-//                polling(
-//                    isOffline = isOffline,
-//                    onOffline = onOffline,
-//                    isCompleted = isCompleted,
-//                    onCompleted = onCompleted,
-//                    isError = isError,
-//                    onError = onError,
-//                    isCanceled = isCanceled,
-//                    onCanceled = onCanceled
-//                )
-//            }
-//        }
-//    }
-//}
-
-//private fun handleStateChange(
-//    handle: () -> Unit, pollingScope: ClearableCoroutineScope
-//) {
-//    handle()
-//    pollingScope.clearScope()
-//    return
-//}
+private fun handleStateChange(handle: () -> Unit, pollingScope: ClearableCoroutineScope) {
+    handle()
+    pollingScope.clearScope()
+    return
+}
 
 fun Fragment.openPhoneDial(phoneNumber: String) {
     Intent(Intent.ACTION_DIAL).apply {
