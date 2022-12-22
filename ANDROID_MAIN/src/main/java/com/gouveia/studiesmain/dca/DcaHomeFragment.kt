@@ -82,6 +82,9 @@ class DcaHomeFragment : Fragment(R.layout.fragment_dca_home) {
             //DEFAULT EXCEPTION HANDLER: https://youtu.be/zu9MOl95LKs
             dcaPollingApi.setOnClickListener { navTo(R.id.dcaPollingApiFragment) }
 
+            //COMO EXIBIR SPLASH SCREEN MODERNO SEM XML: https://youtu.be/cMXE8PN-qIc
+            dcaSplashScreen.setOnClickListener { showYoutubeVideo("cMXE8PN-qIc") }
+
         }
 
     }

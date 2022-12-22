@@ -28,14 +28,12 @@
         <item name="android:windowFullscreen">true</item>
     </style>
 
-    <!-- +=======================================================+ -->
-    <!-- | Video Splash Screen: https://youtu.be/cMXE8PN-qIc     | -->
-    <!-- +=======================================================+ -->
-<!--    <style name="SplashScreen" parent="Theme.SplashScreen">-->
-<!--        <item name="windowSplashScreenBackground">@color/splash_background_color</item>-->
-<!--        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_logo</item>-->
-<!--        <item name="postSplashScreenTheme">@style/Theme.DesafiosComunsAndroid</item>-->
-<!--    </style>-->
+    <!-- SPLASH SCREEN THEME -->
+    <style name="SplashScreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/splash_background_color</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_logo</item>
+        <item name="postSplashScreenTheme">@style/Theme.StudiesMain</item>
+    </style>
 
     <!-- +===========================================================+ -->
     <!-- | Video Dialog From Context: https://youtu.be/W8La6tMRv14   | -->

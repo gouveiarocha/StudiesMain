@@ -21,14 +21,12 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <!-- +=======================================================+ -->
-    <!-- | Video Splash Screen: https://youtu.be/cMXE8PN-qIc     | -->
-    <!-- +=======================================================+ -->
-<!--    <style name="SplashScreen" parent="Theme.SplashScreen">-->
-<!--        <item name="windowSplashScreenBackground">@color/black</item>-->
-<!--        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_logo</item>-->
-<!--        <item name="postSplashScreenTheme">@style/Theme.DesafiosComunsAndroid</item>-->
-<!--    </style>-->
+    <!-- SPLASH SCREEN THEME -->
+    <style name="SplashScreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/black</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_logo</item>
+        <item name="postSplashScreenTheme">@style/Theme.StudiesMain</item>
+    </style>
 
     <!-- +===========================================================+ -->
     <!-- | Video Dialog From Context: https://youtu.be/2RRr_opi6Fk   | -->
