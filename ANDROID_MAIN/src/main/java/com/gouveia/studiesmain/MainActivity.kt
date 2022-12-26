@@ -1,11 +1,13 @@
 package com.gouveia.studiesmain
 
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.View
 import android.view.ViewTreeObserver
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.gouveia.studiesmain.databinding.ActivityMainBinding
 import com.gouveia.studiesmain.utils.extensions.preventScreenshotsAndRecentAppThumbnails
@@ -72,10 +74,35 @@ class MainActivity : AppCompatActivity() {
         // SETUP DO BOTTOM NAVIGATION VIEW: https://youtu.be/1mG3-I8bof0
         setupBottomNavigation()
 
+        // SETUP DA TOOLBAR
+        setupToolbar()
+
     }
 
     private fun setupBottomNavigation() {
         with(binding.bottomNavigation) { setupWithNavController(navController) }
+    }
+
+    // COMO CRIAR UMA TOP ACTION BAR COM NAV CONTROLLER: https://youtu.be/RbOCBzHIwSw
+    // 1- ADICIONAR A Toolbar NO LAYOUT E CONFIGURAR O THEME PARA NÃO OCORRER ERRO ABAIXO
+    // 2- CONFIGURAR PARA PEGAR OS TITULOS DO NAV_GRAPH
+    // 3- FAZER O SETUP
+    private fun setupToolbar() {
+        // Erro mencionado: Caused by: java.lang.IllegalStateException: This Activity already has an
+        // action barsupplied by the window decor. Do not request Window.FEATURE_SUPPORT_ACTION_BAR
+        // and set windowActionBar to false in your theme to use a Toolbar instead.
+        setSupportActionBar(binding.mainToolbar)
+        supportActionBar?.apply { setupActionBarWithNavController(navController) }
+        //Configura o voltar da toolbar ->
+        binding.mainToolbar.setNavigationOnClickListener { navController.navigateUp() }
+    }
+
+    fun setToolbarNavigationIcon(icon: Drawable?) {
+        binding.mainToolbar.navigationIcon = icon
+    }
+
+    fun setToolbarNavigationTitle(title: String?) {
+        binding.mainToolbar.title = title
     }
 
 }

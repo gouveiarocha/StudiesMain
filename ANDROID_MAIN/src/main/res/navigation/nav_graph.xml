@@ -10,7 +10,7 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.gouveia.studiesmain.MainFragment"
-        android:label="fragment_main"
+        android:label="Home"
         tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/action_mainFragment_to_gdcHomeFragment"
@@ -48,6 +48,9 @@
         <action
             android:id="@+id/action_gdcHomeFragment_to_gdcInteractiveUiFragment"
             app:destination="@id/gdcInteractiveUiFragment" />
+        <action
+            android:id="@+id/action_gdcHomeFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
     </fragment>
 
     <fragment
@@ -159,6 +162,9 @@
         <action
             android:id="@+id/action_dcaHomeFragment_to_dcaPollingApiFragment"
             app:destination="@id/dcaPollingApiFragment" />
+        <action
+            android:id="@+id/action_dcaHomeFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
     </fragment>
 
     <fragment

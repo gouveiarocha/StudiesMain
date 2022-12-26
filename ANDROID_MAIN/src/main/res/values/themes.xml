@@ -3,7 +3,7 @@
     <!-- Base application theme - ATENTE-SE PARA O DETALHE "DayNight" -->
     <style name="Theme.StudiesMain" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
 
-        <!-- Video setup toolbar: https://youtu.be/RbOCBzHIwSw -->
+        <!-- SETUP TOOLBAR: https://youtu.be/RbOCBzHIwSw -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
 
