@@ -14,7 +14,7 @@
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/drawable/ic_login.xml" value="0.1" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/drawable/ic_success.xml" value="0.162" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/font/test.xml" value="0.16145833333333334" />
-        <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/activity_test.xml" value="0.10648148148148148" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/alert_dialog_custom.xml" value="0.20416666666666666" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/alert_dialog_custom_button.xml" value="0.20416666666666666" />
@@ -47,6 +47,7 @@
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_pps_movies.xml" value="0.20416666666666666" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_pps_proximity_sensor.xml" value="0.33" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_pps_sensor_manager.xml" value="0.20416666666666666" />
+        <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/menu/bottom_navigation_menu.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>

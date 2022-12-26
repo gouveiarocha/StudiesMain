@@ -1,21 +1,28 @@
 package com.gouveia.studiesmain
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.ViewTreeObserver
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.setupWithNavController
 import com.gouveia.studiesmain.databinding.ActivityMainBinding
-import com.gouveia.studiesmain.pps.pocs.movies.di.pocMoviesModule
 import com.gouveia.studiesmain.utils.extensions.preventScreenshotsAndRecentAppThumbnails
-import org.koin.android.ext.koin.androidContext
-import org.koin.android.ext.koin.androidLogger
-import org.koin.core.context.startKoin
 
 // SINGLE PAGE APPLICATION - NESSE PROJETO, VAMOS TENTAR USAR APENAS UMA ACTIVITY.
 // VANTAGEM: VOCÊ FAZ CONFIUGRAÇÕES UMA ÚNICA VEZ EM UM LUGAR CENTRAL!
 
-class MainActivity : AppCompatActivity(R.layout.activity_main){
+class MainActivity : AppCompatActivity() {
+
+    // BOTTOM NAVIGATION VIEW: https://youtu.be/1mG3-I8bof0
+    // 1- ADICIONAR O BottomNavigationView NO LAYOUT E CRIAR MENU (bottom_navigatio_menu)
+    // 2- DEFINIR BINDING E OBTER NAVCONTROLLER
+    // 3- FAZER O SETUP DO NAVIGATION VIEW USANDO O NAVIGATION GRAPH
+    private lateinit var binding: ActivityMainBinding
+    private val navController by lazy {
+        supportFragmentManager.findFragmentById(R.id.nav_host_fragment)!!.findNavController()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,6 +51,10 @@ class MainActivity : AppCompatActivity(R.layout.activity_main){
         // 4- ATENÇÃO AO BUG DESCRITO NO FINAL DO VIDEO
         installSplashScreen()
 
+        //Trecho de código está aqui devido necessidade para resolução de bug relacioado a SplashScreen...
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
         //Alterar o tempo de delay da SplashScreen ->
         val content: View = findViewById(android.R.id.content)
         content.viewTreeObserver.addOnPreDrawListener(
@@ -58,6 +69,13 @@ class MainActivity : AppCompatActivity(R.layout.activity_main){
         )
         // --- FIM SPLASHSCREEN
 
+        // SETUP DO BOTTOM NAVIGATION VIEW: https://youtu.be/1mG3-I8bof0
+        setupBottomNavigation()
+
+    }
+
+    private fun setupBottomNavigation() {
+        with(binding.bottomNavigation) { setupWithNavController(navController) }
     }
 
 }
