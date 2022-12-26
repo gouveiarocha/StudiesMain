@@ -76,6 +76,7 @@ class DcaHomeFragment : Fragment(R.layout.fragment_dca_home) {
 
             //DIALOGS CUSTOMIZADOS: https://youtu.be/W8La6tMRv14
             //DIALOG FULLSCREEN: https://youtu.be/DRkS0NWNAvg
+            //BOTTOM SHEET DIALOG: https://youtu.be/vku9pMNHT9o
             dcaFullscreenDialog.setOnClickListener { navTo(R.id.dcaDialogsFragment) }
 
             //COMO REALIZAR UM POLLING A UMA API: https://youtu.be/OX2KhMbm0_I

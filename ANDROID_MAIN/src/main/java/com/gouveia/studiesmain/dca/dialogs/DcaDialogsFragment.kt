@@ -6,8 +6,10 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.gouveia.studiesmain.R
 import com.gouveia.studiesmain.databinding.FragmentDcaDialogsBinding
+import com.gouveia.studiesmain.dca.dialogs.bottom_sheet.TicketSelectionFragment
 import com.gouveia.studiesmain.utils.extensions.*
 
 // DIALOGS CUSTOMIZADOS USANDO EXTENSIONS.
@@ -74,6 +76,17 @@ class DcaDialogsFragment : Fragment(R.layout.fragment_dca_dialogs) {
                     "TESTE DE MENSAGEM",
                     "POSITIVE BUTTON", { showToast("POSITIVE BUTTON") },
                     "NEGATIVE BUTTON", { showToast("NEGATIVE BUTTON") }
+                )
+            }
+
+            // BOTTOM SHEET DIALOG: https://youtu.be/vku9pMNHT9o
+            // 1- CRIAR CLASSE UTILITARIA (TicketUtil)
+            // 2- DEFINIR LAYOUT E ITENS A SEREM EXIBIDOS
+            // 3- CRIAR A CLASSE DE TELA FLUTUANTES
+            btnSheetDialog.setOnClickListener {
+                TicketSelectionFragment(true).show(
+                    parentFragmentManager,
+                    BottomSheetDialogFragment::class.simpleName
                 )
             }
 
