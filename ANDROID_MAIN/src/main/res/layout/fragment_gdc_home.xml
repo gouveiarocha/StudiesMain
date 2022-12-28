@@ -163,7 +163,7 @@
             tools:ignore="RtlHardcoded" />
 
         <Button
-            android:id="@+id/codelab_activities_intents"
+            android:id="@+id/gdc_activities_intents"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"

@@ -51,6 +51,9 @@
         <action
             android:id="@+id/action_gdcHomeFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_gdcHomeFragment_to_gdcSendFragment"
+            app:destination="@id/gdcSendFragment" />
     </fragment>
 
     <fragment
@@ -124,6 +127,16 @@
         android:name="com.gouveia.studiesmain.gdc.user_interface.interactive_ui.GdcInteractiveUiFragment"
         android:label="fragment_gdc_interactive_ui"
         tools:layout="@layout/fragment_gdc_interactive_ui" />
+
+    <fragment
+        android:id="@+id/gdcSendFragment"
+        android:name="com.gouveia.studiesmain.gdc.user_interface.activities_intents.GdcSendFragment"
+        android:label="fragment_gdc_send"
+        tools:layout="@layout/fragment_gdc_send">
+        <action
+            android:id="@+id/action_gdcSendFragment_to_gdcReplyFragment"
+            app:destination="@id/gdcReplyFragment" />
+    </fragment>
 
     <!--- DCA -->
 
@@ -289,6 +302,15 @@
         android:name="com.gouveia.studiesmain.pps.pocs.movies.PpsMoviesFragment"
         android:label="fragment_pps_poc_movies"
         tools:layout="@layout/fragment_pps_movies" />
+    <fragment
+        android:id="@+id/gdcReplyFragment"
+        android:name="com.gouveia.studiesmain.gdc.user_interface.activities_intents.GdcReplyFragment"
+        android:label="fragment_gdc_reply"
+        tools:layout="@layout/fragment_gdc_reply">
+        <action
+            android:id="@+id/action_gdcReplyFragment_to_gdcSendFragment"
+            app:destination="@id/gdcSendFragment" />
+    </fragment>
 
 
 </navigation>

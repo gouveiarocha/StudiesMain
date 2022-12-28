@@ -17,6 +17,7 @@
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/drawable/ic_success.xml" value="0.162" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/font/test.xml" value="0.16145833333333334" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/activity_navigation_test.xml" value="0.36666666666666664" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/activity_test.xml" value="0.10648148148148148" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/alert_dialog_custom.xml" value="0.20416666666666666" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/alert_dialog_custom_button.xml" value="0.20416666666666666" />
@@ -44,12 +45,15 @@
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_gdc_material_components.xml" value="0.20416666666666666" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_gdc_notification.xml" value="0.560546875" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_gdc_product_grid.xml" value="0.19010416666666666" />
+        <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_gdc_reply.xml" value="0.36666666666666664" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_gdc_select_image.xml" value="0.20416666666666666" />
+        <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_gdc_send.xml" value="0.36666666666666664" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_interactive_ui.xml" value="0.209375" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_pps_movies.xml" value="0.20416666666666666" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_pps_proximity_sensor.xml" value="0.33" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_pps_sensor_manager.xml" value="0.20416666666666666" />
+        <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_reply.xml" value="0.36666666666666664" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/fragment_ticket_selection.xml" value="0.2625" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/layout/ticket_selection_element.xml" value="0.2625" />
         <entry key="..\:/Douglas/DEV/Android Studio WorkSpace/StudiesMain/ANDROID_MAIN/src/main/res/menu/bottom_navigation_menu.xml" value="0.36666666666666664" />

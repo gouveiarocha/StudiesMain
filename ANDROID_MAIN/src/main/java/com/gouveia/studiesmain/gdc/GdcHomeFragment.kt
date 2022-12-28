@@ -36,6 +36,9 @@ class GdcHomeFragment : Fragment(R.layout.fragment_gdc_home) {
             // INTERACTIVE ANDROID STUDIO UI - https://youtu.be/XBUbvKczRRI
             binding.gdcInteractiveUi.setOnClickListener { navTo(R.id.gdcInteractiveUiFragment) }
 
+            // NAVEGAÇÃO ACTIVITIES/FRAGMENTS E INTENTS - https://youtu.be/5gqNUeNi9es
+            binding.gdcActivitiesIntents.setOnClickListener { navTo(R.id.gdcSendFragment) }
+
         }
 
     }

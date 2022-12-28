@@ -71,7 +71,7 @@ class TicketSelectionFragment(private val showAddItem: Boolean) : BottomSheetDia
         )
         bottomSheetElements.add(
             TicketElement(
-                R.drawable.ic_success,
+                R.drawable.ic_pages,
                 "Ticket Valido",
                 true,
                 TicketSelectionType.SELECT
@@ -79,7 +79,7 @@ class TicketSelectionFragment(private val showAddItem: Boolean) : BottomSheetDia
         )
         bottomSheetElements.add(
             TicketElement(
-                R.drawable.ic_success,
+                R.drawable.ic_pages,
                 "Exemplo de ticket ADD",
                 false,
                 TicketSelectionType.ADD
@@ -87,7 +87,7 @@ class TicketSelectionFragment(private val showAddItem: Boolean) : BottomSheetDia
         )
         bottomSheetElements.add(
             TicketElement(
-                R.drawable.ic_success,
+                R.drawable.ic_pages,
                 "Exemplo de ticket ENTER_MANUAL",
                 false,
                 TicketSelectionType.ENTER_MANUAL
